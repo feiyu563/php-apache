@@ -162,7 +162,7 @@ RUN set -xe; \
 COPY docker-php-source /usr/local/bin/
 
 RUN set -eux; \
-	\
+        chmod 777 /usr/local/bin/docker-php-source; \
 	savedAptMark="$(apt-mark showmanual)"; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
