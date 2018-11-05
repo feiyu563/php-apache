@@ -8,6 +8,8 @@ FROM debian:stretch-slim
 
 # prevent Debian's PHP packages from being installed
 # https://github.com/docker-library/php/pull/542
+USER root
+
 RUN set -eux; \
 	{ \
 		echo 'Package: php*'; \
